@@ -1,6 +1,13 @@
 class DeviseCreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
+      
+      ## For use with facebook
+      t.string :name
+      t.string :provider
+      t.string :uid
+      t.string :image
+      
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""

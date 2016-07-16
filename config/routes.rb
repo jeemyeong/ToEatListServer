@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "home#index"
+  root to: "data#food"
   devise_for :users
   get 'data/food'
   get 'data/make'
@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post 'data/making'
   post 'data/editing/:id' => 'data#editing'
   get 'data/destroy/:id' => 'data#destroy'
+  get 'data/loadData'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

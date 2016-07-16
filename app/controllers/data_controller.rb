@@ -2,6 +2,11 @@ class DataController < ApplicationController
   def food
     @foods = Food.all
   end
+  def loadData
+    respond_to do |format|
+      format.json { render json: Food.all }
+    end
+  end
   def make
     
   end
