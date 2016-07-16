@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'data/food'
   get 'data/make'
   get 'data/edit/:id' => 'data#edit'
