@@ -1,2 +1,55 @@
 <h1>Data#food</h1>
 <p>Find me in app/views/data/food.html.erb</p>
+<style type="text/css">
+td, th {
+   padding-right:10px; padding-left:10px;
+}
+body {
+ overflow-x:scroll; 
+}
+</style>
+<%=@foods.inspect%>
+<br><br>
+<table>
+  <thead>
+    <tr>
+      <th style="border:3px solid #ecf0f1;">id (in DB)  </th>
+      <th style="border:3px solid #ecf0f1;">name  </th>
+      <th style="border:3px solid #ecf0f1;">category  </th>
+      <th style="border:3px solid #ecf0f1;">description  </th>
+      <th style="border:3px solid #ecf0f1;">restaurant  </th>
+      <th style="border:3px solid #ecf0f1;">loca_simple  </th>
+      <th style="border:3px solid #ecf0f1;">loca_map  </th>
+      <th style="border:3px solid #ecf0f1;">image_file  </th>
+      <th style="border:3px solid #ecf0f1;">created at  </th>
+      <th style="border:3px solid #ecf0f1;">updated at  </th>
+      <th style="border:3px solid #ecf0f1;">edit  </th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @foods.each do |f| %>
+      <tr>
+        <td style="border:3px solid #ecf0f1;"><%= f.id %>  </td>
+        <td style="border:3px solid #ecf0f1;"><%= f.name %>  </td>
+        <td style="border:3px solid #ecf0f1;"><%= f.category %>  </td>
+        <td style="border:3px solid #ecf0f1;"><%= f.description %>  </td>
+        <td style="border:3px solid #ecf0f1;"><%= f.restaurant %>  </td>
+        <td style="border:3px solid #ecf0f1;"><%= f.loca_simple %>  </td>
+        <td style="border:3px solid #ecf0f1;"><%= f.loca_map %>  </td>
+        <td style="border:3px solid #ecf0f1;"><%= f.image_file %>  </td>
+        <td style="border:3px solid #ecf0f1;"><%= f.created_at.in_time_zone("Seoul") %>  </td>
+        <td style="border:3px solid #ecf0f1;"><%= f.updated_at.in_time_zone("Seoul") %>  </td>
+        <td style="border:3px solid #ecf0f1;">
+            <a href="/data/edit/<%=f.id%>">[  modify  ]</a>
+            or
+            <a href="/data/destroy/<%=f.id%>">[  delete  ]</a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

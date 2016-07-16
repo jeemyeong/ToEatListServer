@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   get 'data/food'
+  get 'data/make'
+  get 'data/edit/:id' => 'data#edit'
+  post 'data/making'
+  post 'data/editing/:id' => 'data#editing'
+  get 'data/destroy/:id' => 'data#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

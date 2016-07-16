@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+#Install carrierwave to upload image files
+gem 'carrierwave'
+gem 'mini_magick', :git => 'git://github.com/minimagick/minimagick.git', :ref => '6d0f8f953112cce6324a524d76c7e126ee14f392'
+gem 'fog'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

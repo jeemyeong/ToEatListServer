@@ -1,0 +1,41 @@
+    <div class="container form-signin">
+        <%= form_tag "/data/making/", method: "post", enctype: "multipart/form-data", class: "form-signin" do %>
+            <div class="form-group">
+            <label for="inputName">name</label>
+              <input type="text" id="inputName" class="form-control" name="name">
+            </div>
+            
+            <div class="form-group">
+            <label for="inputCategory">category</label>
+              <input type="text" id="inputCategory" class="form-control" name="category">
+            </div>
+            
+            <div class="form-group">
+            <label for="inputDescription">description</label>
+              <input type="text" id="inputDescription" class="form-control" name="description">
+            </div>
+            
+            <div class="form-group">
+            <label for="inputRestaurant">restaurant</label>
+              <input type="text" id="inputRestaurant" class="form-control" name="restaurant">
+            </div>
+            
+            <div class="form-group">
+            <label for="inputLocaSimple">loca_simple</label>
+              <input type="text" id="inputLocaSimple" class="form-control" name="loca_simple">
+            </div>
+            
+            <div class="form-group">
+            <label for="inputLocaMap">loca_map</label>
+              <input type="text" id="inputLocaMap" class="form-control" name="loca_map">
+            </div>
+            
+            <div class="form-group">
+            <label for="inputImageFile" for="inputImage">image_file</label>
+            <input type="file" id="inputImageFile" class="form-control" placeholder="image" name="image_file">
+            </div>
+            
+          <br>
+          <button class="btn btn-success">입력하기</button>
+      <% end %>
+  </div>
